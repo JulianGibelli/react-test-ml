@@ -1,0 +1,11 @@
+
+.item-container{
+    border: solid 2px green;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+
+}

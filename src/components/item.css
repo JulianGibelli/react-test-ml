@@ -1,0 +1,7 @@
+.card-container{
+    border: solid 2px red;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

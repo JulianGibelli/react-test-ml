@@ -13,8 +13,9 @@ export default function Navbar() {
         <NavLink
           to="/category/remeras"
           style={({ isActive }) => ({
-            color: isActive ? "black" : "white",
+            color: isActive ? "#1d3557" : "#d90429",
             textDecoration: isActive ? "none" : "dashed",
+            fontStyle: isActive ? "italic" : "normal"
           })}
         >
           <li>Remeras</li>
@@ -22,8 +23,9 @@ export default function Navbar() {
         <NavLink
           to="/category/pantalones"
           style={({ isActive }) => ({
-            color: isActive ? "black" : "white",
+            color: isActive ? "#1d3557" : "#d90429",
             textDecoration: isActive ? "none" : "dashed",
+            fontStyle: isActive ? "italic" : "normal"
           })}
         >
           <li>Pantalones</li>
@@ -31,8 +33,9 @@ export default function Navbar() {
         <NavLink
           to="/category/zapatillas"
           style={({ isActive }) => ({
-            color: isActive ? "black" : "white",
+            color: isActive ? "#1d3557" : "#d90429",
             textDecoration: isActive ? "none" : "dashed",
+            fontStyle: isActive ? "italic" : "normal"
           })}
         >
           <li>Zapatillas</li>

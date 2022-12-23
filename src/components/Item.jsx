@@ -1,12 +1,12 @@
 import React from "react";
-import "./item.css"
+import "./item.css";
 
 export default function Item({ title, key, img, price }) {
   return (
-    <div id={key} className="card-container" data-aos="fade-right">
-      <img src={img} alt="assd"/>
+    <div id={key} className="card-container" data-aos="fade-up">
+      <img src={img} alt="assd" />
       <div>
-        <h3 className= "animate__animated animate__bounce">{title}</h3>
+        <h3 className="animate__animated animate__bounce">{title}</h3>
         <p>${price}</p>
       </div>
     </div>

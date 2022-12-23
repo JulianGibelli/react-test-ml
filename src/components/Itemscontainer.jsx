@@ -5,7 +5,8 @@ import "./itemscontainer.css";
 import { useParams } from "react-router-dom";
 
 export default function Itemscontainer() {
-  const [productos, setProductos] = useState([]);
+  const [productos, setProductos] = useState(null);
+
   let categorias = ["remeras", "pantalones", "zapatillas"];
   let urlsim = useParams().categoryid;
 
@@ -21,17 +22,24 @@ export default function Itemscontainer() {
     }
   }, [urlsim]);
   return (
-    <div className="item-container">
-      {productos.map((item) => {
-        return (
-          <Item
-            title={item.title}
-            key={item.id}
-            img={item.thumbnail}
-            price={item.price}
-          />
-        );
-      })}
-    </div>
+    <>
+      {productos ? (
+        <div className="item-container">
+          {productos.map((item) => {
+            return (
+              <Item
+                title={item.title}
+                key={item.id}
+                img={item.thumbnail}
+                price={item.price}
+                invid={item["inventory_id"]}
+              />
+            );
+          })}
+        </div>
+      ) : (
+        <span class="loader"></span>
+      )}
+    </>
   );
 }
